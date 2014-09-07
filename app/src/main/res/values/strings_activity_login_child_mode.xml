@@ -1,0 +1,14 @@
+<resources>
+
+    <!-- Strings related to login -->
+    <string name="prompt_username">Username</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_unlock"><b>Unlock</b></string>
+    <string name="action_unlock_short">Unlock</string>
+    <string name="menu_forgot_password">Recover lost password</string>
+    <string name="unlock_progress">Unlocking&#8230;</string>
+    <string name="error_incorrect_username">This username is incorrect</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+
+</resources>

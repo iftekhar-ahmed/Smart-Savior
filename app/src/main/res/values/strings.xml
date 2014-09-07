@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Smart Savior</string>
+    <string name="contacts_page">Contacts</string>
+    <string name="preferences_page">Preferences</string>
+    <string name="acknowledgement_page">Acknowledgement</string>
+    <string name="select_contacts">Select Contacts to Allow Calls</string>
+    <string name="ok">OK</string>
+    <string name="search_hint">Search Contacts</string>
+    <string name="load_contact">Loading Contacts&#8230;</string>
+    <string name="instruction">Press a button TWICE to reply</string>
+    <string name="say_safe">I Am Safe</string>
+    <string name="say_unsafe">I Am Not Safe</string>
+    <string name="message_placeholder">Message from Parent1</string>
+
+</resources>

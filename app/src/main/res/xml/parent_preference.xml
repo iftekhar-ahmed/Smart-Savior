@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <PreferenceCategory
+        android:title="Auto Reply" >
+        <CheckBoxPreference
+            android:key="pref_key_auto_reply"
+            android:title="Allow Auto Reply"
+            android:summaryOn="SMS will be sent to your child on missed calls"
+            android:summaryOff="No SMS will be sent to your child on missed calls" />
+        
+        <com.demo.smartsavior.preference.MissedCallPreference
+            android:key="pref_key_num_miss_call"
+            android:dependency="pref_key_auto_reply"
+            android:title="Missed Call Count"
+            android:summary="Number of missed calls before automatic reply SMS is sent" />
+        
+        <Preference
+            android:key="pref_key_contact_1"
+            android:dependency="pref_key_auto_reply"
+            android:title="Contact 1"
+            android:summary="First contact to send automatic reply SMS" />
+        
+        <Preference
+            android:key="pref_key_contact_2"
+            android:dependency="pref_key_auto_reply"
+            android:title="Contact 2 (Optional)"
+            android:summary="Second contact to send automatic reply SMS" />
+        
+        <EditTextPreference
+            android:key="pref_key_sms_text"
+            android:dependency="pref_key_auto_reply"
+            android:title="SMS Text"
+            android:summary="Text for automatic reply SMS"
+            android:dialogMessage="Max Length: 160 characters"
+            android:defaultValue="I am busy. Can you Call me later?" />
+    </PreferenceCategory>
+
+</PreferenceScreen>

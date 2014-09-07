@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_contact_list_item" >
+    
+    <QuickContactBadge
+        android:id="@+id/qcb"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:src="@drawable/ic_action_user"
+        android:scaleType="centerCrop" />
+
+    <TextView
+        android:id="@+id/textView_contact_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:layout_toRightOf="@id/qcb"
+        android:text="Iftekhar Ahmed"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/textView_contact_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView_contact_name"
+        android:layout_alignLeft="@id/textView_contact_name"
+        android:text="017........"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <CheckBox
+        android:id="@+id/checkBox_allow_contact"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerInParent="true"
+        android:focusable="false"
+        android:focusableInTouchMode="false" />
+
+</RelativeLayout>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/action_search"
+        android:icon="@drawable/ic_action_search"
+        android:showAsAction="ifRoom" 
+        android:title="@android:string/search_go"
+        android:actionViewClass="android.widget.SearchView"/>
+    <item
+        android:id="@+id/action_settings"
+        android:icon="@drawable/ic_action_settings"
+        android:showAsAction="ifRoom" android:title="@string/preferences_page"/>
+
+</menu>

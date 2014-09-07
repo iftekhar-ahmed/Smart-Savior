@@ -1,0 +1,109 @@
+<merge xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <LinearLayout
+        android:id="@+id/ack_sending_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout_acknowledgement"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/background"
+        android:gravity="center" >
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:padding="5dp"
+            android:text="@string/message_placeholder"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/DarkBlue" />
+
+        <TextView
+            android:id="@+id/tv_message"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/tv_title"
+            android:layout_alignRight="@id/tv_title"
+            android:layout_below="@id/tv_title"
+            android:background="@android:color/white"
+            android:gravity="center"
+            android:maxLines="3"
+            android:padding="5dp"
+            android:scrollbars="vertical"
+            android:text="@string/instruction"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@android:color/black" />
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout_safety_buttons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_message"
+            android:layout_marginBottom="5dp"
+            android:gravity="center" >
+
+            <TextView
+                android:id="@+id/tv_instruction"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:text="@string/instruction"
+                android:textColor="@android:color/black"
+                android:textSize="15sp" />
+
+            <Button
+                android:id="@+id/btn_say_safe"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_margin="10dp"
+                android:layout_toRightOf="@id/tv_instruction"
+                android:background="@drawable/round_green_button" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignRight="@id/btn_say_safe"
+                android:layout_below="@id/btn_say_safe"
+                android:layout_marginRight="30dp"
+                android:text="@string/say_safe"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btn_say_unsafe"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_margin="10dp"
+                android:layout_toRightOf="@id/btn_say_safe"
+                android:background="@drawable/round_red_button" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/btn_say_unsafe"
+                android:layout_below="@id/btn_say_safe"
+                android:layout_marginLeft="20dp"
+                android:text="@string/say_unsafe"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textStyle="bold" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</merge>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <CheckBoxPreference
+        android:title="Call Control"
+        android:key="pref_key_call_control"
+        android:defaultValue="@bool/call_control_default"
+        android:summaryOn="calls allowed for trusted contacts only"
+        android:summaryOff="all calls are allowed" />
+    <PreferenceCategory android:title="Credentials" >
+        <EditTextPreference
+            android:key="pref_key_username"
+            android:title="Username"
+            android:summary="Use along with password to unlock app" />
+        <EditTextPreference
+            android:inputType="textPassword"
+            android:key="pref_key_password"
+            android:title="Password"
+            android:summary="Create a safe password" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Acknowledgement" >
+        <Preference
+            android:key="pref_key_parent1"
+            android:title="Parent 1"
+            android:summary="First contact to send acknowledgement SMS" />
+        <Preference
+            android:key="pref_key_parent2"
+            android:title="Parent 2"
+            android:summary="Second contact to send acknowledgement SMS" />
+        <EditTextPreference
+            android:defaultValue="I have seen you are busy. I am fine."
+            android:dialogMessage="Max Length: 160 characters"
+            android:key="pref_key_ack_msg"
+            android:title="SMS Text"
+            android:summary="Text for acknowledgement SMS" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Alarm" >
+        <com.demo.smartsavior.preference.AcknowledgementDelayPreference
+            android:key="pref_key_ack_delay"
+            android:title="Delay"
+            android:summary="Delaying to tap acknowledgement button tells app to send alarm SMS to parents" />
+        <com.demo.smartsavior.preference.BatteryPowerPreference
+            android:key="pref_key_battery_drainage"
+            android:title="Power Dropdown"
+            android:summary="As battery goes below this rate, app sends alarm SMS to parents" />
+    </PreferenceCategory>
+
+</PreferenceScreen>

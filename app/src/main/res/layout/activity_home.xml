@@ -1,0 +1,60 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/background"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tv_for_whom"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="13dp"
+        android:src="@drawable/home_icon" />
+
+    <TextView
+        android:id="@id/tv_for_whom"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/radio_group"
+        android:gravity="center"
+        android:text="For Whom?"
+        android:textColor="@android:color/black"
+        android:textSize="30sp"
+        android:layout_marginTop="50dp"
+        android:textStyle="bold" />
+
+    <RadioGroup
+        android:id="@id/radio_group"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center" >
+
+        <RadioButton
+            android:id="@+id/rbtn_child"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="For Children"
+            android:layout_marginLeft="3dp" />
+
+        <RadioButton
+            android:id="@+id/rbtn_parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="For Parents" />
+    </RadioGroup>
+    <Button
+        android:layout_below="@id/radio_group"
+        android:id="@+id/btn_go"
+        android:layout_width="fill_parent"
+        android:layout_height="35dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="30dip"
+        android:background="@drawable/btn_bg_blue_half"
+        android:text="Go"
+        android:textColor="@android:color/white"
+        android:textStyle="bold" />
+</RelativeLayout>
